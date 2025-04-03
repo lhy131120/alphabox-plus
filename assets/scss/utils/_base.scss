@@ -1,0 +1,84 @@
+// import font
+@font-face {
+	font-family: "Noto Sans CJK";
+	src: url("../fonts/NotoSansCJK-wght-400-900.ttf.woff2") format("woff2"),
+		url("../fonts/NotoSansCJK-wght-400-900.ttf.ttc") format("truetype");
+	font-weight: 400 900;
+	font-style: normal;
+	font-display: swap; // 提高載入時的體驗
+}
+
+@font-face {
+	font-family: "Shrikhand";
+	src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+.font-shrikhand {
+	font-family: "Shrikhand", sans-serif;
+	font-weight: 400;
+}
+
+// color
+$primary-100: #7000ff;
+$primary-200: #6e01f8;
+$primary-300: #380c7e;
+$primary-400: #1f0f39;
+$primary-500: #e9e2f3;
+// ...其餘紫色
+
+$custom-colors: (
+	"primary-100": $primary-100,
+	"primary-200": $primary-200,
+	"primary-300": $primary-300,
+	"primary-400": $primary-400,
+	"primary-500": $primary-500,
+	// 依此類推...
+);
+
+// 合併到色彩設定
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// h1,.h1 {
+//   font-size: clamp(24px, calc(40px + (48 - 40) * ((100vw - 320px) / (1440 - 320))), 48px);
+// }
+
+// 1.5rem：最小字體大小（24px）。
+// 3rem：最大字體大小（48px）。
+// 20rem：假設的最小視口寬度 320px（320 / 16 = 20rem）。
+// 90rem：假設的最大視口寬度 1440px（1440 / 16 = 90rem）。
+// (3 - 1.5)：字體大小的差值，即 1.5rem。
+// ((100vw - 20rem) / (90 - 20))：計算當前視口寬度在 20rem 到 90rem 之間的比例。
+
+// font-size: calc(1.5rem + (3 - 1.5) * ((100vw - 20rem) / (90 - 20)));
+
+// h2, .h2 {
+//   font-size: calc(1.5rem + 1.5 * ((100vw - 20rem) / 70))!important;
+// }
+
+// Mixin
+
+// 水平方向的漸層
+@mixin gradient-x($start-color: $primary, $end-color: $secondary) {
+  background-image: linear-gradient(to right, $start-color, $end-color);
+}
+
+// 垂直方向的漸層
+@mixin gradient-y($start-color: $primary, $end-color: $secondary) {
+  background-image: linear-gradient(to bottom, $start-color, $end-color);
+}
+
+@mixin radial-gradient($start-color: $primary, $end-color: $secondary) {
+	background-image: radial-gradient(50% 50% at 50% 50%, $start-color 0%, $end-color 100%);
+}
+
+// useage
+.class {
+	@include radial-gradient(#28085c, #000000);
+  @include gradient-y(#7000FF, #11002D);
+}
+
+
+
