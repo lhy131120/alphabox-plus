@@ -378,7 +378,7 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+$enable-rfs:                  false!default; //true !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -425,6 +425,11 @@ $spacers: (
   13: $spacer * 3.75,  // 60
   14: $spacer * 4,     // 64
   15: $spacer * 5,     // 80 
+  16: $spacer * 6,     // 96
+  17: $spacer * 7,     // 112
+  18: $spacer * 8,     // 128
+  19: $spacer * 8.5,     // 136
+  20: $spacer * 9,     // 144
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -660,6 +665,7 @@ $font-sizes: (
   64: $font-size-base * 4, //64
   48: $font-size-base * 3, //48
   32: $font-size-base * 2, //32
+  20: $font-size-base * 1.25, //20
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1174,7 +1180,7 @@ $nav-link-padding-y:                0!default; //.5rem !default;
 $nav-link-padding-x:                0!default; //1rem !default;
 $nav-link-font-size:                1rem!default; //null !default;
 $nav-link-font-weight:              500!default; //null !default;
-$nav-link-color:                    $light!default; //var(--#{$prefix}link-color) !default;
+$nav-link-color:                    var(--#{$prefix}link-color) !default;
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           var(--#{$prefix}secondary-color) !default;
@@ -1201,10 +1207,10 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  $spacer * .5 !default;
+$navbar-padding-y:                  null!default; //$spacer * .5 !default;
 $navbar-padding-x:                  null !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         1.25rem !default;//.5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link

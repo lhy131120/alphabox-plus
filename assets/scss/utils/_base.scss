@@ -21,26 +21,6 @@
 	font-weight: 400;
 }
 
-// color
-$primary-100: #7000ff;
-$primary-200: #6e01f8;
-$primary-300: #380c7e;
-$primary-400: #1f0f39;
-$primary-500: #e9e2f3;
-// ...其餘紫色
-
-$custom-colors: (
-	"primary-100": $primary-100,
-	"primary-200": $primary-200,
-	"primary-300": $primary-300,
-	"primary-400": $primary-400,
-	"primary-500": $primary-500,
-	// 依此類推...
-);
-
-// 合併到色彩設定
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
 // h1,.h1 {
 //   font-size: clamp(24px, calc(40px + (48 - 40) * ((100vw - 320px) / (1440 - 320))), 48px);
 // }
@@ -62,12 +42,12 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 水平方向的漸層
 @mixin gradient-x($start-color: $primary, $end-color: $secondary) {
-  background-image: linear-gradient(to right, $start-color, $end-color);
+	background-image: linear-gradient(to right, $start-color, $end-color);
 }
 
 // 垂直方向的漸層
 @mixin gradient-y($start-color: $primary, $end-color: $secondary) {
-  background-image: linear-gradient(to bottom, $start-color, $end-color);
+	background-image: linear-gradient(to bottom, $start-color, $end-color);
 }
 
 @mixin radial-gradient($start-color: $primary, $end-color: $secondary) {
@@ -77,8 +57,23 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // useage
 .class {
 	@include radial-gradient(#28085c, #000000);
-  @include gradient-y(#7000FF, #11002D);
+	@include gradient-y(#7000ff, #11002d);
 }
 
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
 
-
+.card-shadow-100 {
+  transition: all 0.3s ease-in-out;
+	&:hover {
+		-webkit-box-shadow: 0px 0px 16px 8px rgba(143, 0, 255, 0.8);
+		-moz-box-shadow: 0px 0px 16px 8px rgba(143, 0, 255, 0.8);
+		box-shadow: 0px 0px 16px 8px rgba(143, 0, 255, 0.8);
+	}
+}

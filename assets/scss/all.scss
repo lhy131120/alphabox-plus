@@ -1,6 +1,23 @@
+// color
+$primary-100: #7000ff;
+$primary-200: #6e01f8;
+$primary-300: #380c7e;
+$primary-400: #1f0f39;
+$primary-500: #e9e2f3;
+
+$custom-colors: (
+	"primary-100": $primary-100,
+	"primary-200": $primary-200,
+	"primary-300": $primary-300,
+	"primary-400": $primary-400,
+	"primary-500": $primary-500,
+);
 // Configuration
 @import "bootstrap/scss/functions";
 @import './utils/variables';
+// 合併到色彩設定
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
 @import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
