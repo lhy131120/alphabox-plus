@@ -368,7 +368,7 @@ $escaped-characters: (
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                true !default;
-$enable-rounded:              true !default;
+$enable-rounded:              false!default; //rue !default;
 $enable-shadows:              false !default;
 $enable-gradients:            false !default;
 $enable-transitions:          true !default;
@@ -428,7 +428,7 @@ $spacers: (
   16: $spacer * 6,     // 96
   17: $spacer * 7,     // 112
   18: $spacer * 8,     // 128
-  19: $spacer * 8.5,     // 136
+  19: $spacer * 8.5,   // 136
   20: $spacer * 9,     // 144
   21: $spacer * 9.5,    // 152
   22: $spacer * 10,    // 160
@@ -556,7 +556,7 @@ $border-widths: (
   5: 5px
 ) !default;
 $border-style:                solid !default;
-$border-color:                $gray-300 !default;
+$border-color:                $light!default; //$gray-300 !default;
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
@@ -657,6 +657,7 @@ $h6-font-size:                $font-size-base !default; //16
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  0: 0,
   1: $h1-font-size, //96
   2: $h2-font-size, //64
   3: $h3-font-size, //48
@@ -665,6 +666,7 @@ $font-sizes: (
   6: $h6-font-size, //16
   96: $font-size-base * 6, //96
   64: $font-size-base * 4, //64
+  40: $font-size-base * 2.5, //40
   48: $font-size-base * 3, //48
   32: $font-size-base * 2, //32
   20: $font-size-base * 1.25, //20

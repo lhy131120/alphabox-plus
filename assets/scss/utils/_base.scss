@@ -55,10 +55,14 @@
 }
 
 // useage
-.class {
-	@include radial-gradient(#28085c, #000000);
-	@include gradient-y(#7000ff, #11002d);
-}
+// .class {
+// 	@include radial-gradient(#28085c, #000000);
+// 	@include gradient-y(#7000ff, #11002d);
+// }
+
+.rotate-icon {
+    animation: rotate 5s linear infinite;
+  }
 
 @keyframes rotate {
 	0% {
@@ -76,4 +80,78 @@
 		-moz-box-shadow: 0px 0px 16px 8px rgba(143, 0, 255, 0.8);
 		box-shadow: 0px 0px 16px 8px rgba(143, 0, 255, 0.8);
 	}
+}
+
+.border-lg-end {
+  @include media-breakpoint-up(lg) {
+    border-right: 1px solid #ffffff;
+  }
+}
+
+.aniBtn {
+  transition: all 0.3s ease;
+  &:hover {
+    animation: scale 1.2s linear forwards infinite;
+  }
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+  50% {
+    transform: scale(1.15);
+  }
+	100% {
+		transform: scale(1);
+	}
+}
+
+.arrow-icon {
+  display: inline-block;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  line-height: 0;
+  transition: all 0.3s ease;
+  &-lg{
+    background-size: cover;
+  }
+  &-start {
+    background-image: url('data:image/svg+xml,<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_303_5647" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="48"><rect width="180" height="48" fill="%23ffffff"/></mask><g mask="url(%23mask0_303_5647)"><path d="M26 38L4 24L26 10L19.15 22H176V26H19.15L26 38Z" fill="%23828282"/></g></svg>');
+  }
+  &-end {
+    background-image: url('data:image/svg+xml,<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_250_5034" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="48"><rect width="180" height="48" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_250_5034)"><path d="M154 38L160.85 26H4V22H160.85L154 10L176 24L154 38Z" fill="white"/></g></svg>');
+  }
+
+  &:hover {
+    background-image: url('data:image/svg+xml,<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_250_5034" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="48"><rect width="180" height="48" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_250_5034)"><path d="M154 38L160.85 26H4V22H160.85L154 10L176 24L154 38Z" fill="%23828282"/></g></svg>');
+    animation: aniBtn 1.2s linear forwards infinite;
+  }
+}
+
+@keyframes aniBtn {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 0;
+  &.dot-lg {
+    width: 16px;
+    height: 16px;
+  }
 }
