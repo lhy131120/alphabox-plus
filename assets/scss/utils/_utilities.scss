@@ -210,6 +210,7 @@ $utilities: map-merge(
         50: 50%,
         75: 75%,
         100: 100%,
+        155: 155px,
         auto: auto
       ))
     ),
@@ -222,6 +223,7 @@ $utilities: map-merge(
         75: 75%,
         100: 100%,
         132: 132px,
+        155: 155px,
         196: 196px,
         351: 351px,
         416:  416px,
@@ -240,6 +242,7 @@ $utilities: map-merge(
       values: (
         100: 100vw,
         "90px": 90px,
+        "155px": 155px,
         "196px": 196px,
       )
     ),
@@ -253,7 +256,8 @@ $utilities: map-merge(
         50: 50%,
         75: 75%,
         100: 100%,
-        auto: auto
+        auto: auto,
+        406: 406px,
       ))
     ),
     "max-height": (
