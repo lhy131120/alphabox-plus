@@ -39,4 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
   },
 });
 
+const aboutSwiper = new Swiper('.about .swiper', {
+  spaceBetween: 0,
+  slidesPerView: 1,
+  loop: false,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  navigation: {
+    nextEl: '.about .swiper-button-next',
+    prevEl: '.about .swiper-button-prev',
+  },
+})
+
 });
