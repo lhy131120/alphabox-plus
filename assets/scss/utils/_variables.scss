@@ -467,8 +467,8 @@ $body-emphasis-color:       $black !default;
 //
 // Style anchor elements.
 
-$link-color:                              $dark!default; //$primary !default;
-$link-decoration:                         none!default; //underline !default;
+$link-color:                              $primary !default;
+$link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -664,15 +664,12 @@ $font-sizes: (
   4: $h4-font-size, //24
   5: $h5-font-size, //20
   6: $h6-font-size, //16
-  400: $font-size-base * 25, //400
-  128: $font-size-base * 8, //128
   96: $font-size-base * 6, //96
   64: $font-size-base * 4, //64
   40: $font-size-base * 2.5, //40
   48: $font-size-base * 3, //48
   32: $font-size-base * 2, //32
   20: $font-size-base * 1.25, //20
-  14: $font-size-base * 0.875,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -721,7 +718,7 @@ $blockquote-footer-color:     $gray-600 !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
 $hr-margin-y:                 $spacer !default;
-$hr-color:                    inherit !default;
+$hr-color:                    $light!default; //inherit !default;
 
 // fusv-disable
 $hr-bg-color:                 null !default; // Deprecated in v5.2.0

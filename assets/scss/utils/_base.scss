@@ -199,3 +199,23 @@
     }
   }
 }
+
+.products-details {
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-image: url('data:image/svg+xml,<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_303_5647" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="48"><rect width="180" height="48" fill="%23ffffff"/></mask><g mask="url(%23mask0_303_5647)"><path d="M26 38L4 24L26 10L19.15 22H176V26H19.15L26 38Z" fill="%23ffffff"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100% !important;
+    max-width: 180px;
+    line-height: 0;
+    transition: all 0.3s ease;
+    &:hover {
+      background-image: url('data:image/svg+xml,<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_303_5647" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="48"><rect width="180" height="48" fill="%23ffffff"/></mask><g mask="url(%23mask0_303_5647)"><path d="M26 38L4 24L26 10L19.15 22H176V26H19.15L26 38Z" fill="%23828282"/></g></svg>');
+    }
+    &:after {
+      content: none !important;
+    }
+  }
+}

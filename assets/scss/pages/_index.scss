@@ -1,5 +1,14 @@
+.banner {
+	background: no-repeat center center / cover url('../assets/images/home_background.png');
+	margin-bottom: -104px;
+}
+
 .about {
 	position: relative;
+	z-index: 2;
+	@include media-breakpoint-down(lg) {
+		padding: 136px 0 0 0;
+	}
 	&:after {
 		content: "";
 		position: absolute;

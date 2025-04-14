@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Robot</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main>
+      <div class="container">
+        <ul class="nav nav-tabs products-tab" id="aiModal-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="diane-tab" data-bs-toggle="tab" data-bs-target="#diane" type="button" role="tab" aria-controls="diane" aria-selected="true">Diane</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="felix-tab" data-bs-toggle="tab" data-bs-target="#felix" type="button" role="tab" aria-controls="felix" aria-selected="false">Felix</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="karina-tab" data-bs-toggle="tab" data-bs-target="#karina" type="button" role="tab" aria-controls="karina" aria-selected="false">Karina</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="vito-tab" data-bs-toggle="tab" data-bs-target="#vito" type="button" role="tab" aria-controls="vito" aria-selected="false">Vito</button>
+          </li>
+        </ul>
+        
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="diane" role="tabpanel" aria-labelledby="diane-tab" tabindex="0">Diane</div>
+          <div class="tab-pane fade" id="felix" role="tabpanel" aria-labelledby="felix-tab" tabindex="0">Felix</div>
+          <div class="tab-pane fade" id="karina" role="tabpanel" aria-labelledby="karina-tab" tabindex="0">Karina</div>
+          <div class="tab-pane fade" id="vito" role="tabpanel" aria-labelledby="vito-tab" tabindex="0">Vito</div>
+        </div>
+        
+      </div>
+      <div class="row position-relative">
+        <div class="col">
+          <img src="" alt="">
+        </div>
+        <div class="col">
+          <div class="d-flex">
+            <h2>Diane</h2>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+		<script type="module" src="../main.js"></script>
+	</body>
+</html>
