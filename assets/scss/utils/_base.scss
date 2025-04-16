@@ -233,7 +233,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 3.75rem;
-  transition: all .3s ease;
+	transition: all 0.3s ease;
 	@include media-breakpoint-down(lg) {
 		width: 3rem;
 		height: 3rem;
@@ -288,12 +288,12 @@
 		aspect-ratio: 1;
 		line-height: 0;
 		margin: 0 auto;
-    @include media-breakpoint-down(xl) {
-      width: 128px;
-    }
-    @include media-breakpoint-down(lg) {
-      width: 109px;
-    }
+		@include media-breakpoint-down(xl) {
+			width: 128px;
+		}
+		@include media-breakpoint-down(lg) {
+			width: 109px;
+		}
 	}
 	/* 旋轉的 SVG */
 	.rotate-svg {
@@ -338,4 +338,64 @@
 	to {
 		transform: translateY(15px);
 	}
+}
+
+// p + icon
+.hasIcon {
+	padding-left: 3.25rem;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		content: "";
+		display: inline-block;
+		width: 2.5rem;
+		height: 2.5rem;
+		background-repeat: no-repeat;
+		background-size: contain;
+		transition: all 0.3s ease;
+	}
+	&.flowerIcon:before {
+		background-image: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_390_209" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40"><rect width="40" height="40" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_390_209)"><path d="M17.0833 35V25.0833L8.49992 30.0417L5.58325 25L14.1666 20L5.58325 15.0417L8.49992 10L17.0833 14.9583V5H22.9166V14.9583L31.4999 10L34.4166 15.0417L25.8333 20L34.4166 25L31.4999 30.0417L22.9166 25.0833V35H17.0833Z" fill="%23000000"/></g></svg>');
+	}
+}
+
+.product-details {
+  height: 100%;
+	.hoverBorder {
+		position: relative;
+		&:before {
+			position: absolute;
+			content: "";
+			display: block;
+			width: 0;
+			height: 2px;
+			background-color: #000000;
+			inset: auto auto 0 0;
+			transition: all 0.3s ease;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+		}
+	}
+
+  &:hover {
+    .hoverBorder:before {
+      width: 100%;
+    }
+  }
+}
+
+.bg-method-area {
+  @include radial-gradient(#28085C, #000000);
+}
+
+.bg-about-page {
+  @include radial-gradient(#300871, #000000);
+}
+
+.pg-about-banner {
+  height: 280px;
+  background: url("../images/about_us.png") no-repeat 70% 50% / cover;
 }
