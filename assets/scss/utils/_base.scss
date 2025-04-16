@@ -233,6 +233,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 3.75rem;
+  transition: all .3s ease;
 	@include media-breakpoint-down(lg) {
 		width: 3rem;
 		height: 3rem;
@@ -315,7 +316,7 @@
 	}
 
 	.arrow-svg:hover .arrow {
-		animation: move-down 0.5s ease-in-out infinite alternate;
+		animation: move-down 1s ease-in-out infinite alternate;
 	}
 }
 
