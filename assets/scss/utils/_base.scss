@@ -456,3 +456,24 @@
     }
   }
 }
+
+.button-back {
+  text-decoration: none;
+  position: relative;
+  color: #ffffff!important;
+  transition: all 0.3s ease;
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #7000FF;
+    left: 5px;
+    bottom: 0px;
+    transition: all 0.3s ease;
+  }
+  &:hover:before {
+    width: 95%;
+  }
+}
