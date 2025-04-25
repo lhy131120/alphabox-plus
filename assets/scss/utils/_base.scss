@@ -405,6 +405,11 @@
 	@include radial-gradient(#300871, #000000);
 }
 
+// contact-page 
+.bg-contact-page {
+  @include radial-gradient(#28085C, #000000);
+}
+
 .pg-about-banner {
 	height: 280px;
 	background: url("../images/about_us.png") no-repeat 70% 50% / cover;
@@ -457,6 +462,7 @@
   }
 }
 
+// button back
 .button-back {
   text-decoration: none;
   position: relative;
@@ -508,70 +514,47 @@
   }
 }
 
-// details & summary 
-details {
-  padding: 32px 0;
-  margin-bottom: 16px;
-  border-bottom: 1px dashed #ffffff;
-
-  summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
+// Accordion
+.accordion {
+  border-top: 1px solid #ffffff;
+  @include media-breakpoint-up(lg) {
+    border-top: none;
+  }
+  .accordion-item {
+    background-color: transparent;
+  }
+  .accordion-header {
+    font-size: 1rem;
     font-weight: 500;
-    transition: color .3s ease;
-    .summary-icon {
-      position: relative;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &:before {
-        content: "\0271A";
-        display: block;
-        line-height: 1;
-        font-size: 28px;
-        color: $primary-400;
-        transition: all 0.3s ease;
-      }
+    line-height: 1.5;
+    color: $primary-400;
+  }
+  .accordion-button {
+    color: $primary-400;
+    font-weight: 500;
+    background-color: transparent;
+    padding: 2rem 1rem 2rem 0;
+    &:focus {
+      box-shadow: none;
     }
-  }
-
-  .details-content {
-    height: 0;
-    overflow: hidden;
-    will-change: height, opacity;
-    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease 0.3s;
-    p {
-      font-weight: 500;
-      opacity: 0;
-      color: $primary-400;
-      margin-bottom: 8px;
-      transform: translateY(10px);
-      transition: all .5s ease;
+    &:after {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-image: none;
+      content: "\0271B";
+      font-size: 1.25rem;
+      text-align: center;
+      line-height: 2.5rem;
+      transition: all 0.3s ease;
     }
-  }
-}
-
-details[open] {
-  summary {
-    color: $primary-100;
-  }
-  .summary-icon {
-    &:before {
+    &:not(.collapsed) {
+      padding-bottom: 0;
+    }
+    &:not(.collapsed):after {
       content: "\0268A";
-      color: $primary-100;
     }
   }
-
-  .details-content {
-    height: auto;
-    p {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .accordion-body {
+    padding: 0.5rem 4rem 2rem 0;
   }
 }

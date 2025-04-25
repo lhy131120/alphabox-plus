@@ -1,80 +1,223 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>AI-Robot - FAQ</title>
-	</head>
-	<body>
-		<%- include('./layout/header'); -%>
-		<main>
-			<section class="bg-primary-500">
-				<div class="container">
-          <div class="row pt-13 pb-10 py-lg-14 border-light border-bottom">
-            <h2 class="fs-40 fs-lg-48 mb-0 lh-base ls-100 text-bold text-primary-400 d-inline-block fw-bolder">FAQ</h2>
-          </div>
-					<div class="row gx-5">
-						<div class="col-lg-4 py-8 py-lg-10 px-0">
-              <div class="nav flex-column nav-pills gap-5" id="v-pills-tab" role="tablist">
-                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#tab-content-1" type="button" role="tab" aria-controls="tab-content-1" aria-selected="true">ALPHABOX+ 使用問題</button>
-                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tab-content-2" type="button" role="tab" aria-controls="tab-content-2" aria-selected="false">訂購與運送</button>
-                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tab-content-3" type="button" role="tab" aria-controls="tab-content-3" aria-selected="false">產品保養與維修</button>
-              </div>
-            </div>
-            <div class="col-lg-8 px-0">
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="tab-content-1" role="tabpanel" aria-labelledby="tab-content-1" tabindex="0">
-                  <details>
-                    <summary>
-                      <span class="summary-title">ALPHABOX+ 的使用方式是什麼？</span><span class="summary-icon"></span>
-                    </summary>
-                    <div class="details-content">
-                      <p>首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。</p>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maiores ad omnis harum laudantium laborum iste hic fugiat consequatur reprehenderit obcaecati, totam illum sed, deserunt odit nobis quidem quisquam molestiae.</p>
-                    </div>
-                  </details>
-                  <!-- <details class="details-summary">
-                    <summary>ALPHABOX+ 需要什麼樣的環境來使用？</summary>
-                    <div class="details-content">
-                      首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。
-                    </div>
-                  </details>
-                  <details class="details-summary">
-                    <summary>ALPHABOX+ 支援哪些語言？</summary>
-                    <div class="details-content">
-                      首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。
-                    </div>
-                  </details>
-                  <details class="details-summary">
-                    <summary>ALPHABOX+ 的軟體更新方式為何？</summary>
-                    <div class="details-content">
-                      首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。
-                    </div>
-                  </details>
-                  <details class="details-summary">
-                    <summary>購買 ALPHABOX+ 後的售後服務如何？</summary>
-                    <div class="details-content">
-                      首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。
-                    </div>
-                  </details>
-                  <details class="details-summary">
-                    <summary>ALPHABOX+ 與其他智能家居設備的相容性如何？</summary>
-                    <div class="details-content">
-                      首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。
-                    </div>
-                  </details> -->
-                </div>
-                <div class="tab-pane fade" id="tab-content-2" role="tabpanel" aria-labelledby="tab-content-2" tabindex="0">2</div>
-                <div class="tab-pane fade" id="tab-content-3" role="tabpanel" aria-labelledby="tab-content-3" tabindex="0">3</div>
-              </div>
-            </div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<%- include('./layout/footer'); -%>
 
-		<script type="module" src="../main.js"></script>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Robot - FAQ</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+  <main>
+    <section class="bg-primary-500">
+      <div class="container">
+        <div class="row pt-13 pb-10 py-lg-14 border-light border-bottom">
+          <h2 class="fs-40 fs-lg-48 mb-0 lh-base ls-100 text-bold text-primary-400 d-inline-block fw-bolder">FAQ</h2>
+        </div>
+        <div class="row gx-5">
+          <div class="col-lg-4 py-8 py-lg-10 px-0">
+            <div class="nav flex-column nav-pills gap-5" id="v-pills-tab" role="tablist">
+              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#tab-content-1" type="button" role="tab" aria-controls="tab-content-1" aria-selected="true">
+                ALPHABOX+ 使用問題
+              </button>
+              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tab-content-2" type="button" role="tab" aria-controls="tab-content-2" aria-selected="false">
+                訂購與運送
+              </button>
+              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#tab-content-3" type="button" role="tab" aria-controls="tab-content-3" aria-selected="false">
+                產品保養與維修
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-8 px-0">
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-content-1" role="tabpanel" aria-labelledby="tab-content-1" tabindex="0">
+                <div class="accordion accordion-flush mb-15 mb-lg-17" id="accordionWrap-1">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+                        ALPHABOX+ 的使用方式是什麼？
+                      </button>
+                    </h2>
+                    <div id="collapse-1" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-1">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          首先請確保機器人已安裝並連接至Wi-Fi，然後使用專屬的應用程式進行設定。隨後即可透過語音指令或應用程式與機器人進行互動。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                        ALPHABOX+ 需要什麼樣的環境來使用？
+                      </button>
+                    </h2>
+                    <div id="collapse-2" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-1">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          ALPHABOX+
+                          適用於大多數室內環境，建議在光線適中、空間開闊的房間使用，以確保最佳的3D立體投影效果。理想環境為溫度介於10°C至35°C，濕度低於80%的室內空間。請避免將設備放置在陽光直射或潮濕的地方，並確保有穩定的Wi-Fi連線以支援語音辨識和線上功能。設備需放置在平穩的表面，距離投影牆面或屏幕約1至3公尺，以獲得清晰的投影畫面。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                        ALPHABOX+ 支援哪些語言？
+                      </button>
+                    </h2>
+                    <div id="collapse-3" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-1">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          ALPHABOX+
+                          支援多種語言，包括中文（繁體、簡體）、英文、日文、韓文、西班牙文、法文和德文。透過最新的語音辨識技術升級，機器人能準確識別不同語言的語音指令，並以流暢的語音回應。用戶可在設置中選擇偏好語言，未來也將透過軟體更新新增更多語言支援，以滿足全球用戶的需求。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                        ALPHABOX+ 的軟體更新方式為何？
+                      </button>
+                    </h2>
+                    <div id="collapse-4" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-1">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          ALPHABOX+
+                          採用雲端自動更新技術，確保用戶始終體驗最新的功能和性能優化。只要設備連接到Wi-Fi，系統會在後台檢查並下載最新的軟體版本。更新過程無需用戶手動操作，設備會在閒置時自動完成安裝。用戶也可以透過ALPHABOX+
+                          的手機應用程式手動檢查更新，或在設定中開啟更新提醒功能。若遇更新問題，可聯繫線上客服獲得技術支援。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                        購買 ALPHABOX+ 後的售後服務如何？
+                      </button>
+                    </h2>
+                    <div id="collapse-5" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-1">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          ALPHABOX+
+                          提供完善的售後服務，包括一年標準保固，涵蓋硬體故障的免費維修或更換。用戶可透過官方網站、應用程式或24/7線上客服聯繫技術支援團隊，快速解決產品使用問題。此外，公司提供免費的線上使用教程和常見問題解答，幫助用戶快速上手。針對特定市場，部分地區還提供上門維修服務或延長保固選項，確保用戶享有無憂的產品體驗。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+                        ALPHABOX+ 與其他智能家居設備的相容性如何？
+                      </button>
+                    </h2>
+                    <div id="collapse-6" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-1">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          ALPHABOX+ 具備高度相容性，支援與主流智能家居平台的整合，包括Amazon Alexa、Google Home和Apple
+                          HomeKit。用戶可透過語音指令讓ALPHABOX+ 控制智能燈光、恒溫器、空調等設備。此外，ALPHABOX+
+                          支援IFTTT（If This Then
+                          That）協議，允許用戶自訂智能家居自動化場景。例如，可設定機器人在特定時間開啟智能窗簾或播放音樂。未來更新將進一步擴展與更多第三方設備的相容性，提供更無縫的智能家居體驗。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-content-2" role="tabpanel" aria-labelledby="tab-content-2" tabindex="0">
+                <div class="accordion accordion-flush mb-15 mb-lg-17" id="accordionWrap-2">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2-2-1" aria-expanded="false" aria-controls="collapse-2-2-1">
+                        如何訂購 ALPHABOX+？
+                      </button>
+                    </h2>
+                    <div id="collapse-2-2-1" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-2">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          您可以透過官方網站（www.alphabox.com）、官方手機應用程式或授權經銷商訂購
+                          ALPHABOX+。在網站上，選擇您想要的型號（知識型、娛樂型、生活型或情感型），加入購物車後，填寫運送資訊並選擇付款方式（支援信用卡、PayPal
+                          及部分地區的貨到付款）。訂購完成後，您將收到一封確認郵件，內含訂單詳情和預計交貨時間。如需協助，請聯繫我們的24/7線上客服。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2-2" aria-expanded="false" aria-controls="collapse-2-2">
+                        ALPHABOX+ 的運送範圍和費用是多少？
+                      </button>
+                    </h2>
+                    <div id="collapse-2-2" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-2">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          ALPHABOX+
+                          提供全球運送服務，覆蓋亞洲、北美、歐洲、澳洲及部分非洲和南美地區。運送費用根據地區和訂單金額計算，標準運送費用為10至30美元，訂單滿200美元可享免運費優惠。特定地區（如偏遠島嶼）可能需額外運費，費用將在結帳時顯示。運送詳情可於下單時查看，或聯繫客服確認。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2-3" aria-expanded="false" aria-controls="collapse-2-3">
+                        訂購 ALPHABOX+ 後需要多久才能收到貨？
+                      </button>
+                    </h2>
+                    <div id="collapse-2-3" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-2">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          ALPHABOX+
+                          的交貨時間取決於您的運送地區。亞洲、北美和歐洲的主要城市通常在3至7個工作天內送達；其他地區可能需要7至14個工作天。訂單確認後，您將收到一封含有追蹤碼的電子郵件，可隨時查詢物流進度。如遇節日或特殊情況可能略有延遲，我們會提前通知並提供補償方案（如折扣碼）。若需加急運送，請聯繫客服安排。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2-4" aria-expanded="false" aria-controls="collapse-2-4">
+                        如果訂購的 ALPHABOX+ 在運送過程中損壞怎麼辦？
+                      </button>
+                    </h2>
+                    <div id="collapse-2-4" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-2">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          我們為每台 ALPHABOX+
+                          提供完善的運送保險。若產品在運送過程中損壞，請在收到貨物後48小時內透過官方網站或客服郵箱（support@alphabox.com）提交損壞報告，並附上照片和訂單編號。我們將免費安排更換新品或提供全額退款，確保您的權益。客服團隊會全程協助處理，確保您獲得滿意的解決方案。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2-5" aria-expanded="false" aria-controls="collapse-2-5">
+                        可以取消或修改 ALPHABOX+ 的訂單嗎？
+                      </button>
+                    </h2>
+                    <div id="collapse-2-5" class="accordion-collapse collapse" data-bs-parent="#accordionWrap-2">
+                      <div class="accordion-body">
+                        <p class="mb-0">
+                          是的，若訂單尚未進入出貨階段，您可在下單後24小時內透過官方網站的「我的訂單」頁面或聯繫客服取消或修改訂單（例如更改型號、顏色或運送地址）。取消訂單將全額退款至原付款方式，退款處理時間約3至5個工作天。若訂單已出貨，需待收到貨物後申請退貨，詳情請參考我們的退貨政策或聯繫客服團隊。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="tab-content-3" role="tabpanel" aria-labelledby="tab-content-3" tabindex="0">
+                N/A
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <%- include('./layout/footer'); -%>
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
