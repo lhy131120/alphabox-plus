@@ -558,3 +558,47 @@
     padding: 0.5rem 4rem 2rem 0;
   }
 }
+
+// contact page - banner
+.contact-banner {
+  li {
+    padding: 0 312px;
+    line-height: 0;
+    aspect-ratio: 1388 / 232;
+    max-width: 1388px;
+    width: 100%;
+    background-image: url("/assets/images/horizontal/diane_horizontal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    @include media-breakpoint-down(xl) {
+      padding: 0 80px;
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 0 24px;
+      aspect-ratio: 750 / 392;
+      background-image: url("/assets/images/mobile/diane_choose.png");
+    }
+    @include media-breakpoint-down(md) {
+      padding: 0 12px;
+    }
+    &:nth-child(2) {
+      background-image: url("/assets/images/horizontal/felix_horizontal.png");
+      @include media-breakpoint-down(lg) {
+        background-image: url("/assets/images/mobile/felix_choose.png");
+      }
+    }
+    &:nth-child(3) {
+      background-image: url("/assets/images/horizontal/karina_horizontal.png");
+      @include media-breakpoint-down(lg) {
+          background-image: url("/assets/images/mobile/karina_choose.png");
+        }
+      }
+      &:nth-child(4) {
+        background-image: url("/assets/images/horizontal/vito_horizontal.png");
+        @include media-breakpoint-down(lg) {
+          background-image: url("/assets/images/mobile/vito_choose.png");
+        }
+    }
+  }
+}
